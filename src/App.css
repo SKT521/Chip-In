@@ -1,0 +1,324 @@
+/* .App {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.dashboard, .split-bill, .transactions, .recommendations {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  width: 25%;
+}
+/* Large screens 
+@media (min-width: 1024px) {
+  .main-container {
+    flex-direction: row;
+  }
+
+  .dashboard, .split-bill, .transactions, .recommendations {
+    width: 30%; /* Fit components side by side */
+  }
+}
+
+/* Tablets 
+@media (max-width: 1024px) and (min-width: 768px) {
+  .main-container {
+    flex-direction: row;
+  }
+
+  .dashboard, .split-bill, .transactions, .recommendations {
+    width: 45%; /* Slightly larger on tablets */
+  }
+}
+
+/* Mobile screens 
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .dashboard, .split-bill, .transactions, .recommendations {
+    width: 100%; /* Full width for each section 
+  }
+
+  .main-container {
+    padding: 10px;
+  }
+
+  .dashboard, .split-bill, .transactions, .recommendations {
+    margin-bottom: 15px; /* Add some space between stacked sections */
+  }
+}
+
+/* Adjust font sizes for smaller screens 
+body {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .dashboard h3, .split-bill h3, .transactions h3, .recommendations h3 {
+    font-size: 18px; /* Smaller headings on mobile 
+  }
+
+  .dashboard p, .split-bill p, .transactions p, .recommendations p {
+    font-size: 14px; /* Smaller text on mobile 
+  }
+} 
+
+/* App-wide styling */
+.App {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header .actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header button {
+  background-color: #333;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header button:hover {
+  background-color: #000;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  width: 25%;
+  min-width: 250px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.card button {
+  background-color: #333;
+  color: #fff;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #000;
+}
+
+/* Dashboard Section */
+.dashboard h3,
+.split-bill h3,
+.transactions h3,
+.recommendations h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.dashboard p,
+.split-bill p,
+.transactions p,
+.recommendations p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.dashboard .amount,
+.split-bill .amount,
+.transactions .amount,
+.recommendations .amount {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.dashboard .view-button,
+.split-bill .view-button,
+.transactions .view-button,
+.recommendations .view-button {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  color: #333;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dashboard .view-button:hover,
+.split-bill .view-button:hover,
+.transactions .view-button:hover,
+.recommendations .view-button:hover {
+  background-color: #ddd;
+}
+
+/* Split Bill Section */
+.split-bill input[type="file"],
+.split-bill select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.split-bill .submit-button {
+  background-color: #333;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.split-bill .submit-button:hover {
+  background-color: #000;
+}
+
+/* Transactions Section */
+.transactions .tab-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.transactions .tab-buttons button {
+  flex: 1;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #333;
+}
+
+.transactions .tab-buttons .active {
+  background-color: #333;
+  color: #fff;
+}
+
+.transactions .transaction-item {
+  margin-bottom: 10px;
+}
+
+.transactions .mark-as-settled {
+  background-color: #333;
+  color: #fff;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.transactions .mark-as-settled:hover {
+  background-color: #000;
+}
+
+/* Recommendations Section */
+.recommendations .adjust-button,
+.recommendations .view-savings {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.recommendations .adjust-button:hover,
+.recommendations .view-savings:hover {
+  background-color: #ddd;
+}
+
+/* Responsive styling */
+@media (min-width: 1024px) {
+  .main-container {
+    flex-direction: row;
+  }
+
+  .dashboard, .split-bill, .transactions, .recommendations {
+    width: 30%;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .main-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .dashboard, .split-bill, .transactions, .recommendations {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .dashboard, .split-bill, .transactions, .recommendations {
+    width: 100%;
+  }
+}
