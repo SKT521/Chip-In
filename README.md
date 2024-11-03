@@ -36,7 +36,7 @@ Chip-In is a collaborative fundraising platform designed to simplify group donat
   ```
 4. Start the application:
   ```bash
-   npm start
+   npm run dev
   ```
 
 ## Usage
